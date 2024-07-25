@@ -105,9 +105,11 @@
 }
 
 .food{
-    background: rgb(255, 255, 0);
-    /* border: .25vmin solid rgb(255, 255, 255); */
-    /* border-radius: 8px; */
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 0, 8);
+    border: .50vmin solid rgb(235, 111, 130);
+    border-radius: 8px;
 }
 
 #label-container{

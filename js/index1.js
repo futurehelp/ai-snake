@@ -4,7 +4,7 @@ const foodSound = new Audio('music/food.mp3');
 const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3');
 // const musicSound = new Audio('music/music.mp3');
-let speed = 19;
+let speed = 10;
 let score = 0;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -97,7 +97,7 @@ function gameEngine(){
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add('food')
     board.appendChild(foodElement);
-
+    
 
 }
 
@@ -120,7 +120,7 @@ else{
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/nG9EWEB2R/";
+    const URL = "https://teachablemachine.withgoogle.com/models/mKXUqF6Xy/" // "https://teachablemachine.withgoogle.com/models/jQMlZXomm/" //  "https://teachablemachine.withgoogle.com/models/mKXUqF6Xy/" //  "https://teachablemachine.withgoogle.com/models/nG9EWEB2R/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
@@ -130,6 +130,7 @@ else{
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
         // Note: the pose library adds a tmPose object to your window (window.tmPose)
+    
         model = await tmPose.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
